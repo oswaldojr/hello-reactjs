@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 
-var Main = require('../containers/main');
-var FriendsContainer = require('../containers/friends');
+var Main = require('../containers/Main');
+var FriendsContainer = require('../containers/Friends');
 
 var {Router, Route, hashHistory} = ReactRouter;
 
