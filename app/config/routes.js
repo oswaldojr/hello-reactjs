@@ -2,14 +2,18 @@ var React = require('react');
 var ReactRouter = require('react-router');
 
 var Main = require('../containers/Main');
-var FriendsContainer = require('../containers/Friends');
+var Home = require('../components/Home');
 
-var {Router, Route, hashHistory} = ReactRouter;
+var PromptContainer = require('../containers/PromptContainer');
+
+var {Router, Route, IndexRoute, hashHistory} = ReactRouter;
 
 var routes = (
 	<Router history={hashHistory}>
 		<Route  path='/' component={Main}>
-			<Route path='/friends' component={FriendsContainer}/>
+			<IndexRoute component={Home}/>
+			<Route path='/playerOne' header='Player One' component={PromptContainer}/>
+			<Route path='/playerTwo/:playerOne' header='Player Two' component={PromptContainer}/>
 		</Route>
 	</Router>
 );

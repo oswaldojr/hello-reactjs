@@ -1,13 +1,10 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var Style = require('../styles/index');
 
-var transparentBg = {
-	background: 'transparent'
-};
-
-function Prompt (props) {
-	return (
-		<div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
+var Prompt = (props) => 
+	(
+		<div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={Style.transparentBg}>
 			<h1>{props.header}</h1>
 			<div className="col-sm-12">
 				<form onSubmit={props.onSubmitUser}>
@@ -18,16 +15,13 @@ function Prompt (props) {
 							placeholder="Github username"
 							type="text"
 							value={props.username}
-						/>
-					</div>
-					<div className="form-control col-sm-4 col-sm-offset-4">
-						<button className="btn btn-block btn-success" type="submit">Continue</button>
-					</div>
+						/>						
+						<button className="form-control btn btn-block btn-success" type="submit">Continue</button>
+					</div>					
 				</form>
 			</div>
 		</div>
-	)
-};
+	);
 
 Prompt.PropTypes = {
 	header: PropTypes.string.isRequired,
