@@ -31,11 +31,11 @@ class ConfirmBattleContainer extends React.Component {
     }
 
     componentWillReceiveProps(){
-        console.log('componentWillReceiveProps');
+        //console.log('componentWillReceiveProps');
     }
 
     componentWillUnmount(){
-       console.log('componentWillUnMount');     
+       //console.log('componentWillUnMount');     
     }
 
     render(){ 
