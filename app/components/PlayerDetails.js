@@ -4,8 +4,9 @@ var Style = require('../styles/index');
 
 var PlayerDetails = (props) =>
 (
-    <div className="col-sm-4">
-        <p>{props.header}</p>
+    <div className="col-sm-4 col-sm-offset-1">
+        <h3>{props.header}</h3>
+        {props.subHeader && <p>{props.subHeader}</p>}
         <div className="thumbnail">
             <img src={props.info.avatar_url} href={props.info.html_url} alt={props.info.name} title={props.info.name} style={Style.cursorPointer} target="_blank"/>
             <div className="caption">
@@ -18,6 +19,7 @@ var PlayerDetails = (props) =>
 ); 
 
 PlayerDetails.propTypes = {
+    header: PropTypes.string.isRequired,
     info: PropTypes.shape({
         avatar_url: PropTypes.string.isRequired,
         name: PropTypes.string,

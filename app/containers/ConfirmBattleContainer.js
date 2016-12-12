@@ -13,7 +13,7 @@ class ConfirmBattleContainer extends React.Component {
     }    
 
     componentWillMount(){
-        console.log('componentWillMount');
+        //console.log('componentWillMount');
     }
 
     componentDidMount(){       
@@ -38,8 +38,17 @@ class ConfirmBattleContainer extends React.Component {
        //console.log('componentWillUnMount');     
     }
 
+    handleInitiateBattle(){
+        this.context.router.push({
+            pathname: '/results',
+            state: {
+                playersInfo: this.state.playersInfo
+            }
+        });
+    }
+
     render(){ 
-        return <ConfirmBattle isLoading={this.state.isLoading} playersInfo={this.state.playersInfo} />
+        return <ConfirmBattle isLoading={this.state.isLoading} playersInfo={this.state.playersInfo} onInitiateBattle={this.handleInitiateBattle.bind(this)} />
     }
 };
 

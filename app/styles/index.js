@@ -5,8 +5,8 @@ var styles = {
 	cursorPointer: {
 		cursor: 'pointer'
 	},
-	marginTop15: {
-		    'margin-top': '1.5em'
+	marginTop: {
+		    marginTop: '1.5em'
 	}
 };
 
