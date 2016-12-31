@@ -4,6 +4,7 @@ var PlayerDetailsWrapper = require('./PlayerDetailsWrapper');
 var PlayerDetails = require('./PlayerDetails');
 var Style = require('../styles/index');
 var Link = require('react-router').Link;
+var Loading = require('./Loading');
 
 function Reestart(props){
     return (
@@ -20,7 +21,7 @@ function Reestart(props){
 function Results(props){
     
     if(props.isLoading == true){
-        return <h1> Loading ...</h1>
+        return <Loading/>
     }
     
     var playerOneInfo = props.playersInfo[0];

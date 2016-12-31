@@ -5,11 +5,12 @@ var PlayerDetailsWrapper = require('./PlayerDetailsWrapper');
 var PlayerDetails = require('./PlayerDetails');
 var MainWrapper = require('./MainWrapper');
 var Link = require('react-router').Link;
+var Loading = require('./Loading');
 
 function ConfirmBattle(props){
     return props.isLoading === true 
-    ? <p>Loading...</p>
-    : <MainWrapper>                        
+    ? <MainWrapper><Loading/></MainWrapper>
+    : <MainWrapper>
             <PlayerDetailsWrapper header="Confirm Battle" subHeader="Who is winner?">
                 <PlayerDetails header="PlayerOne" info={props.playersInfo[0]}/>
                 <PlayerDetails header="PlayerTwo" info={props.playersInfo[1]}/>
